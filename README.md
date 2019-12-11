@@ -1,2 +1,2 @@
 # jmportfolio
-This a single page portfolio pluse blog post page build on django and python.
+This a single page portfolio plus blog post page build on django and python.
