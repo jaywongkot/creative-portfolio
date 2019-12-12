@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div id="home" class="banner-area section-padding">
+    <div class="bg-overlay black"></div>
+    <div class="containter">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="welcome-text">
+                    <h1 class="wow fadeInDown" data-wow-delay="0.4s">{{ post.title }}</h1>
+                    <div class="name-area wow fadeInDown" data-wow-delay="0.2s">{{ post.author }} | {{ post.published_date }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div>
+    {% if post.published_date %}
+      <div>
+        {{ post.published_date }}
+      </div>
+    {% endif %}
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.text|linebreaksbr }}</p>
+  </div>
+  
+{% endblock %}
