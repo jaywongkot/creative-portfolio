@@ -1,10 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+  <div id="home" class="banner-area section-padding">
+      <div class="bg-overlay black"></div>
+      <div class="containter">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="welcome-text">
+                      <div class="name-area wow fadeInDown" data-wow-delay="0.2s">Share something useful</div>
+                      <h1 class="wow fadeInDown" data-wow-delay="0.4s">To make the world a better place</h1>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
   <h2>New Post</h2>
   <form method="POST" class="post-form">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="save btn btn-default">Save</button>
   </form>
+
 {% endblock %}
