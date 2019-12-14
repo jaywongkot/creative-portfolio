@@ -2,170 +2,164 @@
 
 {% block content %}
 
-  <div id="home" class="banner-area section-padding">
-    <div class="bg-overlay black"></div>
-    <div class="containter">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="welcome-text">
-                    <div class="name-area wow fadeInDown" data-wow-delay="0.2s">Hello, my name is Jay Wongkot</div>
-                    <h1 class="wow fadeInDown" data-wow-delay="0.4s">Create Innovative application with us</h1>
-                    <a href="#about" class="my-btn-1 wow fadeInDown" data-wow-delay="0.6s">Learn more</a>
-                    <a href="#contact" class="my-btn-2 wow fadeInDown" data-wow-delay="0.8s">Get in touch</a>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-
-  {# About section #}
-
-    <div id="about" class="about-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 col-sn-8 col-xs-12 wow fadeInLeft" data-wow-delay="0.2s">
-                    <div class="about-left">
-                        <h2 class="section-title">About Me</h2>
-                        <div class="line"></div>
-                        <h4>{{ about.short_description }}</h4>
-                        <p>{{ about.description }}</p>
-                        <a href="images/about/cv.jpg" download>Download CV&nbsp;<i class="fa fa-download"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-5 visible-md visible-lg wow fadeInDown" data-wow-delay="0.6s">
-                    <div class="profile">
-                        <img src="{{ about.image.url }}" alt="Profile image" class="img-responsive">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {# Services Section #}
-    <div id="services" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-header text-center">
-                        <h2>Services I offer</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                {% for service in services %}
-
-                    <div class="col-md-4 col-sm-4">
-                        <div class="single-service wow fadeInDown" data-wow-delay="0.2s">
-                            <i class="icon icon-wallet"></i>
-                            <h2>{{ service.name }}</h2>
-                            <p>{{ service.description }}</p>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-
-    {# Recent Works Section #}
-    <div id="portfolio" class="portfolio-area section-padding">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-header">
-                        <h2>My Recent Works</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                {% for work in works %}
-                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
-                        <div class="gallery-items">
-                            <a class="view img" href="{{ work.image.url }}">
-                                <img src="{{ work.image.url }}" alt="work image">
-                            </a>
-
-                            <div class="gallery-text">
-                                <h2>{{ work.title }}</h2>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-
-    {# Contact section #}
-
-    <div class="invitation-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="single-invite text-center">
-                    <h2>Do you have any project need to be done?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at cupiditate distinctio dolorem
-                        dolores impedit, inventore magnam magni nam numquam quidem ratione rem repellendus, saepe?</p>
-                    <a href="#contact" class="my-btn-3">Get started</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="contact" class="contact-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-header text-center">
-                        <h2>Contact Me</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 box-contact-form">
-
-                    <form id="contact-form" method="post" action="#">
-
-                        <div class="messages"></div>
-
-                        <div class="controls">
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group wow fadeInDown" data-wow-delay="0.2s">
-                                        <input id="form_name" type="text" name="name" class="form-control"
-                                               placeholder="Enter your full name *" required="required"
-                                               data-error="Fullname is required.">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group wow fadeInDown" data-wow-delay="0.4s">
-                                        <input id="form_email" type="email" name="email" class="form-control"
-                                               placeholder="Enter your email *" required="required"
-                                               data-error="Valid email is required.">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group wow fadeInUp" data-wow-delay="0.6s">
-                                        <textarea id="form_message" name="message" class="form-control"
-                                                  placeholder="Your Message *" rows="4" required="required"
-                                                  data-error="Leave a message for me"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <button class="btn btn-send" value="">Send message</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </form>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
+	<!-- SECTION: Intro -->
+	<header class="header">
+		<div class="introduction">
+			<h1 class="introduction__content">
+				<span class="introduction__content-el introduction__content-el--name">Jay Wongkot</span>
+				<span class="introduction__content-el introduction__content-el--description">Creative</span>
+				<span class="introduction__content-el introduction__content-el--job">Professional</span>
+			</h1>
+			<svg class="introduction__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0" y="0" viewBox="0 0 130 65" xml:space="preserve" enable-background="new 0 0 130 65"><g transform="translate(0.000000,65.000000) scale(0.100000,-0.100000)"><path d="M22.2 634c-50-35-40-47 293-349 174-157 323-285 333-285 24 0 635 552 647 585 8 23 6 30-14 46 -13 10-31 19-40 19s-57-37-107-83c-50-45-179-162-287-260l-197-179 -147 134c-319 289-433 388-446 388C50.2 650 34.2 643 22.2 634z"/></g></svg>
+		</div>
+	</header>
+	<!-- END SECTION: Intro -->
+	<main role="main">
+		<!-- SECTION: About -->
+		<section class="about">
+			<div class="about__wrapper wrapper--small">
+				<div class="about__content">
+					<div class="about__content-blurb blurb blurb--framed">
+						<h2 class="blurb__heading">Nothing is<br>impossible</h2>
+						<p class="blurb__copy no-margin">If you just work hard enough at it</p>
+					</div>
+					<p class="about__content-signature">Jay Wongkot</p>
+				</div>
+				<img class="about__visual" src="./media/img/about-visual.png" alt="Jay Wongkot">
+			</div>
+		</section>
+		<!-- END SECTION: About -->
+		<!-- SECTION: App Design -->
+		<section class="app-design">
+			<div class="app-design__wrapper wrapper--large">
+				<div class="app-design__content blurb">
+					<h2 class="blurb__heading">Topaz App <br>Design</h2>
+					<p class="blurb__copy blurb__copy--tight">App design for Topaz, an awesome creative company from New York.</p>
+					<a class="transform-link" href="#0">Check it out</a>
+				</div>
+			</div>
+			<figure class="app-design__visual"></figure>
+		</section>
+		<!-- END SECTION: App Design -->
+		<!-- SECTION: Web Design -->
+		<section class="web-design">
+			<div class="web-design__wrapper wrapper--small">
+				<div class="web-design__content blurb">
+					<h2 class="blurb__heading">MGF Web <br>Design</h2>
+					<p class="blurb__copy blurb__copy--tight">Web design I made for MGF, an amazing architecture agency from London.</p>
+					<a class="transform-link" href="#0">Check it out</a>
+				</div>
+			</div>
+			<figure class="web-design__visual"></figure>
+		</section>
+		<!-- END SECTION: Web Design -->
+		<!-- SECTION: Work -->
+		<section id="work" class="work">
+			<h2 class="work__heading title">Latest Projects</h2>
+			<div class="work__wrapper wrapper--large">
+				<ul class="work__list">
+					<li class="work__list-el work__list-el--is-active">
+						<div class="work__content">
+							<div class="work__content-blurb blurb blurb--framed">
+								<h3 class="blurb__heading">Strategik INC<br>Web Design</h3>
+								<p class="blurb__copy">The awesome guys at Strategik INC were superb to work with because they knew their goals exactly.</p>
+							</div>
+							<a class="transform-link" href="#0">See full project</a>
+						</div>
+						<div class="work__visual">
+							<img src="./media/img/work-strategik.jpg" alt="Strategik INC">
+						</div>
+					</li>
+					<li class="work__list-el">
+						<div class="work__content">
+							<div class="work__content-blurb blurb blurb--framed">
+								<h3 class="blurb__heading">Ēostre UI Kit<br>Web Design</h3>
+								<p class="blurb__copy">Ēostre UI Kit is made following the latest design trends with focus on usability and fast workflow.</p>
+							</div>
+							<a class="transform-link" href="#0">See full project</a>
+						</div>
+						<div class="work__visual">
+							<img src="./media/img/work-eostre.jpg" alt="Ēostre UI Kit">
+						</div>
+					</li>
+					<li class="work__list-el">
+						<div class="work__content">
+							<div class="work__content-blurb blurb blurb--framed">
+								<h3 class="blurb__heading">Go Outside<br>App Design</h3>
+								<p class="blurb__copy">Quick concept for a fictitious wildlife exploration app. Grab the PSD and start your own exploration.</p>
+							</div>
+							<a class="transform-link" href="#0">See full project</a>
+						</div>
+						<div class="work__visual">
+							<img src="./media/img/work-go-outside.jpg" alt="Go Outside App">
+						</div>
+					</li>
+				</ul>
+				<ul class="work__navigation">
+					<li class="work__navigation-el work__navigation-el--is-active"></li>
+					<li class="work__navigation-el"></li>
+					<li class="work__navigation-el"></li>
+				</ul>
+			</div>
+		</section>
+		<!-- END SECTION: Work -->
+		<!-- SECTION: Blog -->
+		<section id="blog" class="blog">
+			<h2 class="blog__heading title">Blog Posts</h2>
+			<div class="blog__wrapper wrapper--large">
+				<article class="blog__post">
+					<div class="blog__post-thumbnail">
+						<img src="./media/img/blog-post-1.jpg" alt="Man viewing work plans">
+					</div>
+					<div class="blog__post-excerpt">
+						<h3>Days in the office</h3>
+						<p>I love using UI Kits vs website templates because UI Kits give you an easier way to use elements compared to templates.</p>
+						<a class="transform-link" href="#0">Read full article</a>
+					</div>
+				</article>
+				<article class="blog__post">
+					<div class="blog__post-thumbnail">
+						<img src="./media/img/blog-post-2.jpg" alt="Man hanging pictures">
+					</div>
+					<div class="blog__post-excerpt">
+						<h3>Why I use CCO images</h3>
+						<p>CCO images are awesome because you don't have to credit the author, and you can use them anywhere, anytime.</p>
+						<a class="transform-link" href="#0">Read full article</a>
+					</div>
+				</article>
+				<article class="blog__post">
+					<div class="blog__post-thumbnail">
+						<img src="./media/img/blog-post-3.jpg" alt="Men working at a desk">
+					</div>
+					<div class="blog__post-excerpt">
+						<h3>Designing for IOT</h3>
+						<p>Internet of things is coming so quickly, we as designers will have to design UI and UX for more things in the future.</p>
+						<a class="transform-link" href="#0">Read full article</a>
+					</div>
+				</article>
+			</div>
+			<div class="blog__view-more">
+				<a class="button blog__view-more--el" href="#0">View More</a>
+			</div>
+		</section>
+		<!-- END SECTION: Blog -->
+		<!-- SECTION: Contact -->
+		<section id="contact" class="contact">
+			<h2 class="contact__heading title">Contact Me</h2>
+			<div class="contact__wrapper wrapper--large">
+				<div class="contact__visual">
+					<img src="./media/img/contact-visual.png" alt="Jay Wongkot's location">
+				</div>
+				<!-- Simple form setup: formspree.io -->
+				<form class="contact__form">
+					<input class="contact__form-el contact__form-el--name" type="text" placeholder="Your Name" spellcheck="false">
+					<input class="contact__form-el contact__form-el--email" type="email" placeholder="Your Email" spellcheck="false">
+					<textarea class="contact__form-el contact__form-el--message" placeholder="Your Message"></textarea>
+					<input class="contact__form-el contact__form-el--submit" type="submit" value="Send">
+				</form>
+			</div>
+		</section>
+		<!-- END SECTION: Contact -->
+  </main>
 
 {% endblock %}
