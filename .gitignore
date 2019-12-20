@@ -24,6 +24,10 @@ media
 # C extensions
 *.so
 
+# Old templates and static files
+static/old-static
+templates/old-templates
+
 # Distribution / packaging
 .Python
 build/
