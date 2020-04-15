@@ -140,4 +140,6 @@ dmypy.json
 cython_debug/
 
 # VS code
-.vscode
+/.vscode
+
+/media
