@@ -1,13 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>JW</title>
+  <title>Website Design</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Free HTML5 Template plus Photoshop design">
   <meta name="keywords" content="free html template, portfolio, html5, sass, jquery">
-  <meta name="author" content="Jay Wongkot">
+	<meta name="author" content="Jay Wongkot">
+	<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
   {% include 'includes/stylesheets.html' %}
 </head>
 <body>
@@ -27,7 +29,7 @@
 				<ul class="navigation__list">
 					<li><a href="http://127.0.0.1:8000/">Home</a></li>
 					<li><a href="#work">Portfolio</a></li>
-					<li><a href="http://127.0.0.1:8000/blog/">Blog</a></li>
+					<li><a href="#blog">Blog</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>

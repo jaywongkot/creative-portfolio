@@ -1,0 +1,53 @@
+/************************* Introduction *************************/
+
+.introduction-blog
+	position: relative
+	display: flex
+	width: 100%
+	height: 60vh
+	align-items: center
+	justify-content: center
+	
+	&::before
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		font-size: 40vw
+		font-weight: 800
+		opacity: .05
+	
+	&__content
+		color: $c-secondary
+		font-size: 16px
+		font-weight: 800
+		
+		&-el
+			display: block
+				
+			&--description
+				transform: matrix( 1.01107311016097,0,0,1.01107311016097,0,0)
+				margin: 10px 0
+				color: $white
+				font-size: 16vw
+				text-align: center
+				text-transform: uppercase
+				text-shadow: 10px 18px 35px rgba(88,88,88,.23)
+		
+	@media (min-width: 1440px)
+		
+		&::before
+			font-size: 576px
+			
+		&__content
+		
+			&-el
+			
+				&--description
+					font-size: 230px
+					
+	@media (max-height: 540px)
+		
+		&__arrow
+			animation: none
+			

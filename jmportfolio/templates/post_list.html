@@ -2,19 +2,53 @@
 
 {% block content %}
   
-  <div id="home" class="banner-area section-padding">
-    <div class="bg-overlay black"></div>
-    <div class="containter">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="welcome-text">
-                    <div class="name-area wow fadeInDown" data-wow-delay="0.2s">Welcome to Our Blog Posts</div>
-                    <h1 class="wow fadeInDown" data-wow-delay="0.4s">Stay up to date with our newsletter</h1>
-                </div>
-            </div>
-        </div>
+  <header class="header">
+    <div class="introduction-blog">
+      <h1 class="introduction__content">
+        <span class="introduction__content-el introduction__content-el--description">Blog</span>
+      </h1>
     </div>
-  </div>
+  </header>
+
+  <!-- SECTION: Blog -->
+  <section id="blog" class="blog">
+    <div class="blog__wrapper wrapper--large">
+      <article class="blog__post">
+        <div class="blog__post-thumbnail">
+          <img src="./media/img/blog-post-1.jpg" alt="Man viewing work plans">
+        </div>
+        <div class="blog__post-excerpt">
+          <h3>Days in the office</h3>
+          <p>I love using UI Kits vs website templates because UI Kits give you an easier way to use elements compared to templates.</p>
+          <a class="transform-link" href="#0">Read full article</a>
+        </div>
+      </article>
+      <article class="blog__post">
+        <div class="blog__post-thumbnail">
+          <img src="./media/img/blog-post-2.jpg" alt="Man hanging pictures">
+        </div>
+        <div class="blog__post-excerpt">
+          <h3>Why I use CCO images</h3>
+          <p>CCO images are awesome because you don't have to credit the author, and you can use them anywhere, anytime.</p>
+          <a class="transform-link" href="#0">Read full article</a>
+        </div>
+      </article>
+      <article class="blog__post">
+        <div class="blog__post-thumbnail">
+          <img src="./media/img/blog-post-3.jpg" alt="Men working at a desk">
+        </div>
+        <div class="blog__post-excerpt">
+          <h3>Designing for IOT</h3>
+          <p>Internet of things is coming so quickly, we as designers will have to design UI and UX for more things in the future.</p>
+          <a class="transform-link" href="#0">Read full article</a>
+        </div>
+      </article>
+    </div>
+    <div class="blog__view-more">
+      <a class="button blog__view-more--el" href="http://127.0.0.1:8000/blog/">View More</a>
+    </div>
+  </section>
+  <!-- END SECTION: Blog -->
 
   {% for post in blogs %}
   <div>
